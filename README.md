@@ -1,0 +1,1 @@
+# lednice-softwarove-inzenyrstvi
