@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-success: var(--success);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  color-scheme: light;
+  --background: oklch(0.975 0.008 190);
+  --foreground: oklch(0.22 0.025 230);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.025 230);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.025 230);
+  --primary: oklch(0.48 0.09 190);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.94 0.025 190);
+  --secondary-foreground: oklch(0.32 0.06 195);
+  --muted: oklch(0.955 0.008 210);
+  --muted-foreground: oklch(0.52 0.02 230);
+  --accent: oklch(0.94 0.025 190);
+  --accent-foreground: oklch(0.32 0.06 195);
+  --destructive: oklch(0.6 0.2 25);
+  --warning: oklch(0.8 0.14 75);
+  --warning-foreground: oklch(0.38 0.08 60);
+  --success: oklch(0.62 0.13 160);
+  --border: oklch(0.91 0.01 210);
+  --input: oklch(0.91 0.01 210);
+  --ring: oklch(0.48 0.09 190);
+  --radius: 0.875rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
